@@ -19,6 +19,12 @@ if(token  && pathname == '/login'){
     
 }
 
+if(token  && pathname == '/register'){
+    
+    return NextResponse.redirect( new URL('/', request.url)   )
+    
+}
+
 }
 
 
