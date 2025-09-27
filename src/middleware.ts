@@ -13,7 +13,7 @@ export default async function middleware(request:NextRequest){
      
 }
 
-if(token  && pathname == '/login' || pathname == '/register'){
+if(token  && pathname == '/login'){
     
     return NextResponse.redirect( new URL('/', request.url)   )
     
