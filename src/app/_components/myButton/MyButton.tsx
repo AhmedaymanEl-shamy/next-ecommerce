@@ -2,11 +2,12 @@
 import addProductToCart from '@/api/cart.api'
 import { Button } from '@/components/ui/button'
 import { CartContext } from '@/context/cart.context'
+import { useRouter } from 'next/navigation'
 import React, { useContext, useState } from 'react'
 import { toast } from 'sonner'
 
 export default function MyButton({id}:{id:string}) {
-
+   const router = useRouter()
    const [isLoading ,setIsloading] = useState(false)
       const context =useContext(CartContext)
    
@@ -18,7 +19,9 @@ export default function MyButton({id}:{id:string}) {
       context?.handleCart()
     
  }else{
-    toast.error('there is an error')
+    toast.error('You must login first')
+    router.push('/login')
+
  }
     setIsloading(false)
     }

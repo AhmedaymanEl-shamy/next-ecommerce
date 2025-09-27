@@ -43,7 +43,7 @@ try {
       }
 
 } catch (error) {
-    toast.error('you must log in first')
+    toast.error('there is an error')
     console.log(error);
     
 }
