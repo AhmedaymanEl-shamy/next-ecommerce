@@ -2,12 +2,13 @@ import React from 'react'
 import { Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ProductsType } from '@/types/products.types';
+import Image from 'next/image';
 
 export default function ProductDetails({productDetails}:{productDetails:ProductsType}) {
   return <>
   
    <div className='col-span-4'>
-            <img src={productDetails.imageCover} className='w-full'  alt='' />
+            <Image src={productDetails.imageCover} className='w-full'  alt='' />
         </div>
         <div className='col-span-8 space-y-4'>
             <h2 className='text-2xl font-semibold'>{productDetails.title}</h2>

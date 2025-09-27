@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui/button'
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import { LoginSchema, LoginSType, ResetSchema, ResetSType} from '@/schema/auth.schema'
+import { ResetSchema, ResetSType} from '@/schema/auth.schema'
 import { zodResolver } from '@hookform/resolvers/zod'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
@@ -26,7 +26,7 @@ export default function Register() {
     data:values       
     }
 
-    const {data}= await axios.request(options)
+    await axios.request(options)
     
     toast.success('Password reset Successfully')
     router.push('/login')

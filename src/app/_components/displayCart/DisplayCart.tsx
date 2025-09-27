@@ -29,6 +29,8 @@ const context = useContext(CartContext)
 
     } catch (error) {
       toast.error('there is an error')
+      console.log(error);
+      
     }finally{
       setIsLoading(false)
       toast.dismiss(loadToast)
@@ -48,6 +50,8 @@ const context = useContext(CartContext)
     
     } catch (error) {
       toast.error('there is an error')
+      console.log(error);
+      
     }finally{
       setIsLoading(false)
     }

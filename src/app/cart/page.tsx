@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
 import { clearCart} from "@/api/cart.api"
@@ -40,14 +41,18 @@ try {
         toast.success('Cart Cleared')
         context?.handleCart()
       }
+
 } catch (error) {
     toast.error('there is an error')
+    console.log(error);
+    
 }
    }
 
-useEffect(()=>{
+
+useEffect(() => {
   handleGetProductFromCart()
-},[])
+}, [])
 
 if(isLoading){
   return <CartLoading/>

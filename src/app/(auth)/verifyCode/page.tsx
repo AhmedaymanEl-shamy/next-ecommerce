@@ -28,7 +28,7 @@ export default function Register() {
     data:values       
     }
 
-    const {data}= await axios.request(options)
+     await axios.request(options)
     
     toast.success('Code Verified')
     router.push('/resetpassword')

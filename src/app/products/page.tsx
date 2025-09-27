@@ -1,7 +1,4 @@
-import { ProductsType } from '@/types/products.types';
 import React from 'react'
-import Product from '../_components/Product/Product';
-import getAllProducts from '@/api/products.api';
 import HomeCard from '../_components/HomeCard/HomeCard';
 
 

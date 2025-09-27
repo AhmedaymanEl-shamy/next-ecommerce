@@ -26,7 +26,7 @@ export default function Register() {
     data:values       
     }
 
-    const {data}= await axios.request(options)
+     await axios.request(options)
     
     toast.success('Email Created')
     router.push('/login')

@@ -1,4 +1,4 @@
-/* eslint-disable  @typescript-eslint/no-explicit-any */
+
 "use client"
 import { Button } from '@/components/ui/button'
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
@@ -92,7 +92,7 @@ const response:SignInResponse|undefined = await signIn('credentials',{
       <Link className='text-blue-500 underline' href={'/forgetPassword'}>Forget password</Link>
   </div>
       <div className='flex justify-center items-center'>
-        <Link className='text-blue-500 underline font-semibold' href={'/register'}>Don't have Account?</Link>
+        <Link className='text-blue-500 underline font-semibold' href={'/register'}>Dont have Account?</Link>
       </div>
    </form>
 </Form>

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 import logo from '../../../../public/images/freshcart-logo.svg'
 import { CircleX, Menu, ShoppingCart } from 'lucide-react'
@@ -20,10 +21,10 @@ const router = useRouter()
        router.push('/login')
   }
 
-    type loko =any
-  const [toggle,setToggle] = useState(false)
+    
+  const [toggle,setToggle] = useState<any>(false)
   const [iconOk,setIconok] = useState(true)
-    const mobMenuBar:loko = useRef('');
+    const mobMenuBar = useRef<any>('');
 function menuToggle(){
     setToggle(true)
     setIconok(false)
