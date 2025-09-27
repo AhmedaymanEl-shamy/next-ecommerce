@@ -10,14 +10,16 @@ pages:{
      signIn:'/login'
 },
     
-    providers:[Credentials({
+    providers:[
+        Credentials(
+        {
         name:"credentials",
         credentials:{
             email:{},
             password:{}
         },
         authorize:async(values)=>{
-           const response = await fetch(`${process.env.BASE_URl}/auth/signin`,{
+           const response = await fetch(`${process.env.BASE_URL}/auth/signin`,{
             method:'POST',
             body:JSON.stringify({
                 email:values?.email,
