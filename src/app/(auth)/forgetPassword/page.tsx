@@ -22,6 +22,7 @@ export default function Register() {
     data:values       
     }
 
+    console.log(options);
     
     toast.success('Message sent')
     router.push('/verifyCode')
