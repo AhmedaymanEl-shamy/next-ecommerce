@@ -41,7 +41,7 @@ if(paymentflag == 'cash'){
       context?.handleCart()
       router.push('/allorders')
 }else{
-  const data = await makeOnlinePayment(id,'http://localhost:3000',values)
+  const data = await makeOnlinePayment(id,'https://next-ecommerce-ekvmz8fia-ahmedaymanel-shamys-projects.vercel.app/',values)
 
   console.log(data);
   if(data.status == 'success'){
