@@ -43,8 +43,12 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   async function handleCart() {
     const data = await getProductFromCart();
+    
+    console.log('data cart', data);
+    if(data){
 
-    setAllProducts(data.data.products);
+      setAllProducts(data.data.products);
+    }
     let sum = 0;
     data.data.products.forEach((product: Product) => {
       sum += product.count;

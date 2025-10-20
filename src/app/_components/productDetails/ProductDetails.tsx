@@ -8,7 +8,7 @@ export default function ProductDetails({productDetails}:{productDetails:Products
   return <>
   
    <div className='col-span-4'>
-            <Image src={productDetails.imageCover} className='w-full'  alt='' />
+            <Image src={productDetails.imageCover} width={500} height={500} className='w-full'  alt='' />
         </div>
         <div className='col-span-8 space-y-4'>
             <h2 className='text-2xl font-semibold'>{productDetails.title}</h2>
