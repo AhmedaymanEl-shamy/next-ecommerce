@@ -22,18 +22,15 @@ const router = useRouter()
   }
 
     
-  const [toggle,setToggle] = useState<any>(false)
   const [iconOk,setIconok] = useState(true)
     const mobMenuBar = useRef<any>('');
 function menuToggle(){
-    setToggle(true)
     setIconok(false)
     console.log('wow');
     mobMenuBar.current.style.transform ='translateY(32rem)'
     
 }
 function notMenuToggle(){
-    setToggle(false)
     setIconok(true)
      mobMenuBar.current.style.transform ='translateY(-32rem)'
 }
