@@ -5,6 +5,7 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from '@/components/ui/input'
 import { ForgetSType, FrogetSchema} from '@/schema/auth.schema'
 import { zodResolver } from '@hookform/resolvers/zod'
+import axios from 'axios'
 import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import { toast } from 'sonner'
@@ -13,27 +14,27 @@ import { toast } from 'sonner'
 export default function Register() {
   const router =  useRouter()
  async function handleForget(values:ForgetSType){
-    const loadingId = toast.loading('loading.....')
-    
+
+    const loadingId = toast.loading('loading...')
+   
     try {
     const options = {
     url:'https://ecommerce.routemisr.com/api/v1/auth/forgotPasswords',
     method:'POST',
     data:values       
     }
-
-    console.log(options);
+ const {data} = await axios.request(options)  
+    console.log(values);
     
     toast.success('Message sent')
     router.push('/verifyCode')
     
-   
 
     } catch (error:any) {
 
         toast.error(error.response.data.message)
     }finally{
-        toast.dismiss(loadingId)
+      toast.dismiss(loadingId)
     }
 
     

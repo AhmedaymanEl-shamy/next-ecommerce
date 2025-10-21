@@ -25,6 +25,8 @@ export default function Register() {
   mode:'all'
 })
  async function handleLogin(values:LoginSType){
+
+  const loadingId = toast.loading('loading...')
  
 const response:SignInResponse|undefined = await signIn('credentials',{
   email:values.email,
@@ -36,10 +38,12 @@ const response:SignInResponse|undefined = await signIn('credentials',{
     
     if(response?.ok){
       toast.success('logged in successfully')
+      toast.dismiss(loadingId)
 
       window.location.href='/'
     }else{
       toast.error(response?.error)
+      toast.dismiss(loadingId)
     }
 
 }
